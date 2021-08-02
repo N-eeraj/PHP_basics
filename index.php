@@ -27,6 +27,7 @@
 
     $array = array("One", "Two", "Three"); // array
     echo "Array<br>";
+    var_dump($array);
     echo $array[0] . "<br>";
     echo $array[1] . "<br>";
     echo $array[2] . "<br><br>";
@@ -98,5 +99,30 @@
     echo (true || false) . "<br>";
     echo "true xor false: ";
     echo (true xor false) . "<br><br>";
+
+    // string operators
+    $str1 = "Howdy";
+    echo $str1 . "<br>";
+    echo $str1 . " Partner" . "<br>";
+    $str1 .= " Mate";
+    echo $str1 . "<br><br>";
+
+    // array operators
+    $arr1 = array(1, 2, 3);
+    var_dump($arr1);
+    $arr2 = array("1", "2", "3", "4", "5");
+    var_dump($arr2);
+    var_dump($arr1 + $arr2);
+    echo 'array(1, 2, 3) == array("1", "2", "3"): ' . ($arr1 == array("1", "2", "3")) . "<br>";
+    echo 'array(1, 2, 3) === array(1, 2, 3): ' . ($arr1 === array(1, 2, 3)) . "<br>";
+    echo 'array(1, 2, 3) != array("1", "2", "3", "4", "5"): ' . ($arr1 != $arr2) . "<br>";
+    echo 'array(1, 2, 3) <> array("1", "2", "3", "4", "5"): ' . ($arr1 <> $arr2) . "<br>";
+    echo 'array(1, 2, 3) !== array("1", "2", "3"): ' . ($arr1 !== array("1", "2", "3")) . "<br><br>";
+
+    // ternary operator
+    echo "25 < 100: ";
+    echo (25 < 100? "True" : "False") . "<br>";
+    echo "25 > 100: ";
+    echo 25 > 100? "True" : "False";
 
 ?>
