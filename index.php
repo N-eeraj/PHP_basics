@@ -30,7 +30,12 @@
     var_dump($array);
     echo $array[0] . "<br>";
     echo $array[1] . "<br>";
-    echo $array[2] . "<br><br>";
+    echo $array[2] . "<br>";
+    $array = array("zero" => 0, "one" => 1, "two" => 2);
+    var_dump($array);
+    echo $array["zero"] . "<br>";
+    echo $array["one"] . "<br>";
+    echo $array["two"] . "<br><br>";
 
     // arithmetic operaters
     echo "5 + 2 = " . (5 + 2) . "<br>"; // addition
@@ -200,6 +205,56 @@
     var_dump($array);
     foreach ($array as $value)
         echo $value . "<br>";
+    echo "<br><br>";
+
+    // break & continue statements
+    $i = 0;
+    while (true)
+    {
+        ++$i;
+        if ($i == 10)
+            break;
+        if ($i % 2 == 0)
+            continue;
+        echo $i . "<br>";
+    }
+    echo "<br>";
+
+    // user defined functions
+
+        // simple function
+    function fn1()
+    {echo "Hello<br>";}
+    fn1();
+
+        // function with argument
+    function fn2($name)
+    {echo "Welcome $name<br>";}
+    fn2("John");
+
+        // function with return
+    function fn3()
+    {return 3.14;}
+    echo fn3() . "<br>";
+
+        // function with argument & return
+    function fn4($arg1, $arg2)
+    {
+        echo "$arg1 + $arg2 = ";
+        return $arg1 + $arg2;
+    }
+    echo fn4(10, 20) . "<br>";
+
+        // function with default argument
+    function fn5($name = "Person")
+    {echo "Hello $name<br>";}
+    fn5("Jason");
+    fn5();
+    echo "<br>";
+
+    // constants
+    define("PI", 3.14);
+    echo "Pi is a constant of value: " . PI;
     echo "<br><br>";
 
 ?>
