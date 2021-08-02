@@ -257,4 +257,82 @@
     echo "Pi is a constant of value: " . PI;
     echo "<br><br>";
 
+    // arrays
+
+        // indexed array
+    $arr3 = array(1, 2, 3, 4, 5);
+    foreach ($arr3 as $v)
+        echo $v . " ";
+    echo "<br>";
+
+        // associative array
+    $arr4 = array("a" => 1, "b" => 2, "c" => 3);
+    var_dump($arr4);
+    echo $arr4["a"] . " ";
+    echo $arr4["b"] . " ";
+    echo $arr4["c"];
+    echo "<br>";
+
+        // multidimensional array
+    $multi_arr = array("Numbers" => array(1, 2, 3, 4, 5), 
+                            "10 Multiples" => array(10, 20, 30, 40, 50), 
+                            "10 Powers" => array(1, 10, 100, 1000, 10000));
+    var_dump($multi_arr);
+    foreach ($multi_arr as $arr)
+    {
+        var_dump($arr);
+        foreach ($arr as $v)
+            echo $v . " ";
+    }
+    echo "<br><br>";
+
+    // class & objects
+    class Person
+    {
+        public $f_name;
+        public $l_name;
+        public $age;
+
+        function __construct($fname, $lname, $yrs)
+        {
+            $this -> f_name = $fname;
+            $this -> l_name = $lname;
+            $this -> age = $yrs;
+        }
+
+        function fullName()
+        {return $this -> f_name . " " . $this -> l_name;}
+
+        function introduce()
+        {echo "I am {$this -> fullName()} and I'm {$this -> age} years old." . "<br>";}
+    }
+    $dom = new Person("Domnic", "Toretto", 32);
+    $dom -> introduce();
+    $brian = new Person("Brian", "O'Conner", 30);
+    $brian -> introduce();
+    echo "<br>";
+
+    // inheritance
+    class SuperHero extends Person
+    {
+        public $hero;
+
+        function __construct($fname, $lname, $yrs, $hero)
+        {
+            $this -> f_name = $fname;
+            $this -> l_name = $lname;
+            $this -> age = $yrs;
+            $this -> hero = $hero;
+        }
+
+        function introduce()
+        {echo "My name is {$this -> fullName()} and I am {$this -> hero}" . "<br>";}
+    }
+
+    $tony = new SuperHero("Tony", "Stark", 40, "Iron Man");
+    $tony -> introduce();
+    $bruce = new SuperHero("Bruce", "Wayne", 36, "Batman");
+    $bruce -> introduce();
+    echo "<br>";
+
 ?>
