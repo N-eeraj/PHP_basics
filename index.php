@@ -123,6 +123,83 @@
     echo "25 < 100: ";
     echo (25 < 100? "True" : "False") . "<br>";
     echo "25 > 100: ";
-    echo 25 > 100? "True" : "False";
+    echo (25 > 100? "True" : "False") . "<br><br>";
+
+    // if statements
+    $int1 = 10;
+    echo "int1: " . $int1 . "<br>";
+        // simple if
+    if ($int1 > 5)
+        echo "int1 > 5" . "<br>";
+        // if else
+    if ($int1 > 20)
+        echo "int1 > 20";
+    else
+        echo "int1 < 20";
+    echo "<br>";
+        // if elseif else
+    if ($int1 > 0)
+        echo "Positive";
+    elseif ($int1 < 0)
+        echo "Negative";
+    else
+        echo "Zero";
+    echo "<br><br>";
+
+    // switch
+    $int2 = 5;
+    echo "int2: " . $int2 . "<br>";
+    switch ($int2)
+    {
+        case 1:
+            echo "Monday";
+            break;
+        case 2:
+            echo "Tuesday";
+            break;
+        case 3:
+            echo "Wednesday";
+            break;
+        case 4:
+            echo "Thursday";
+            break;
+        case 5:
+            echo "Firday";
+            break;
+        case 6:
+            echo "Saturday";
+            break;
+        case 7:
+            echo "Sunday";
+            break;
+        default:
+            echo "Invalid";
+    }
+    echo "<br><br>";
+
+    // loops
+    
+        // while
+    $i = 0;
+    while ($i < 10)
+        echo ++$i . "<br>";
+    echo "<br>";
+
+        // do while
+    do
+        echo ++$i . "<br>";
+    while($i < 20);
+    echo "<br>";
+
+        // for
+    for ($i = 1; $i < 11; $i++)
+        echo $i . "<br>";
+    echo "<br>";
+
+        // for each
+    var_dump($array);
+    foreach ($array as $value)
+        echo $value . "<br>";
+    echo "<br><br>";
 
 ?>
