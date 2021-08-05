@@ -252,6 +252,32 @@
     fn5();
     echo "<br>";
 
+    // global keyword
+    $x = 5;
+    $y = 10;
+    echo "Global Variable<br>";
+    echo $x . "<br>" . $y . "<br>";
+    function fn6()
+    {
+        global $x;
+        $x += 50;
+        $y = 100;
+    }
+    fn6();
+    echo $x . "<br>" . $y . "<br><br>";
+
+    // static keyword
+    echo "Static Variable<br>";
+    function fn7()
+    {
+        static $a = 1;
+        echo $a++;
+        echo "<br>";
+    }
+    for($i=0; $i<10; $i++)
+        fn7();
+    echo "<br><br>";
+
     // constants
     define("PI", 3.14);
     echo "Pi is a constant of value: " . PI;
@@ -333,6 +359,7 @@
     $tony -> introduce();
     $bruce = new SuperHero("Bruce", "Wayne", 36, "Batman");
     $bruce -> introduce();
-    echo "<br>";
+    echo "<br><br>";
+
 
 ?>
