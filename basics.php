@@ -347,6 +347,58 @@
         foreach ($arr as $v)
             echo $v . " ";
     }
+    echo "<br><br>";
+
+    // array sorts
+    echo "<h2>Sorting an Array</h2>";
+    $arr5 = array(7,5,1,6,5,2,3);
+    echo "Array: ";
+    foreach($arr5 as $item)
+        echo $item . " ";
+    sort($arr5);
+    echo "<br>";
+    echo "Sorted Array: ";
+    foreach($arr5 as $item)
+        echo $item . " ";
+    echo "<br>";
+    echo "Reverse Sorted Array: ";
+    rsort($arr5);
+    foreach($arr5 as $item)
+        echo $item . " ";
+    echo "<br><br>";
+    
+    $arr6 = array("Goku", "Krillin", "Picolo", "Gohan", "Vegeta", "Trunks", "Goten");
+    echo "Array: ";
+    foreach($arr6 as $item)
+        echo $item . " ";
+    echo "<br>";
+    sort($arr6);
+    echo "Sorted Array: ";
+    foreach($arr6 as $item)
+        echo $item . " ";
+    echo "<br>";
+    echo "Reverse Sorted Array: ";
+    rsort($arr6);
+    foreach($arr6 as $item)
+        echo $item . " ";
+    echo "<br><br>";
+
+        // sort by index & value in associative array
+    $arr7 = array("E" => 50, "A" => 10, "G" => 70, "D" => 4, "B" => 2, "F" => 6, "C" => 30);
+    echo "<h4>Array</h4>";
+    var_dump($arr7);
+    echo "<h4>Sorted by Index</h4>";
+    ksort($arr7);
+    var_dump($arr7);
+    echo "<h4>Sorted by Values</h4>";
+    asort($arr7);
+    var_dump($arr7);
+    echo "<h4>Sorted by Index Reverse</h4>";
+    krsort($arr7);
+    var_dump($arr7);
+    echo "<h4>Sorted by Values Reverse</h4>";
+    arsort($arr7);
+    var_dump($arr7);
     echo "<br><hr>";
 
     // class & objects
